@@ -1,0 +1,112 @@
+<div class="popup">
+  <div class="popup-content">
+    <div class="close-button">
+      <div class="x">
+        <b>x</b>
+      </div>
+    </div>
+    <p id="hard-time">Having a hard time deciding?</p>
+    <p id="here"><b>Here, have 15% off!</b></p>
+    <p class="use-code">Use Code</p>
+    <p id="fifteen"><b>15OFF</b></p>
+    <p class="use-code">at checkout!</p>
+  </div>
+</div>
+
+<style>
+  .popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    z-index: 501;
+  }
+  .popup-content {
+    position: fixed;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    margin: 0rem;
+  }
+  .use-code {
+    font-size: 1.5rem;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+  }
+  .close-button {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: rgb(217, 217, 217);
+    color: white;
+    border-radius: 100%;
+    top: -5px;
+    right: -5px;
+    border-style: solid;
+    border-color: rgb(217, 217, 217);
+
+    cursor: pointer;
+  }
+  .x {
+    position: relative;
+    text-align: center;
+    top: -17px;
+    right: 0px;
+    font-size: 2rem;
+  }
+
+  #fifteen {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    background-color: rgb(130, 195, 237);
+    color: white;
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+  }
+  #here {
+    font-size: 2.2rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem
+      "
+  }
+  #hard-time {
+    font-size: 1rem;
+    margin-top: 1rem; 
+    margin-bottom: 0rem";
+  }
+
+  .show-popup {
+    opacity: 1;
+    visibility: visible;
+  }
+  @media only screen and (max-width: 600px) {
+    .popup {
+      width: 100%;
+    }
+    .popup-content {
+      width: 90%;
+    }
+  }
+</style>
+
+<script>
+  const popup = document.querySelector(".popup");
+  const closeButton = document.querySelector(".close-button");
+
+  const toggleModal = () => {
+    popup.classList.toggle("show-popup");
+  };
+  window.setTimeout(toggleModal, 32000);
+
+  closeButton.addEventListener("click", toggleModal);
+</script>
